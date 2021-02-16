@@ -1,0 +1,15 @@
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\obj\Debug\esercizio ponte.csprojAssemblyReference.cache
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\obj\Debug\MainWindow.g.cs
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\obj\Debug\App.g.cs
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\obj\Debug\esercizio ponte_MarkupCompile.cache
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\obj\Debug\esercizio ponte_MarkupCompile.lref
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\bin\Debug\esercizio ponte.exe.config
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\bin\Debug\esercizio ponte.exe
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\bin\Debug\esercizio ponte.pdb
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\obj\Debug\MainWindow.baml
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\obj\Debug\esercizio ponte.g.resources
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\obj\Debug\esercizio_ponte.Properties.Resources.resources
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\obj\Debug\esercizio ponte.csproj.GenerateResource.cache
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\obj\Debug\esercizio ponte.csproj.CoreCompileInputs.cache
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\obj\Debug\esercizio ponte.exe
+E:\Users\magri\Desktop\esercizio ponte\esercizio ponte\obj\Debug\esercizio ponte.pdb
