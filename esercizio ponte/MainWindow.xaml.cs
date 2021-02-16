@@ -40,38 +40,38 @@ namespace esercizio_ponte
 
         }
 
-        public void MuoviConcorrente1()
+        public void MuoviMacchina1()
         {
 
             Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(50,201)));
 
             lock (Ponte)
             {
-                int concorrente1 = 560;
-                int concorrente2 = 682;
+                int macchina1 = 560;
+                int macchina2 = 682;
 
                 while (true)
                 {
                     
-                    concorrente1 -= 30;
+                    macchina1 -= 30;
 
-                    Thread.Sleep(TimeSpan.FromMilliseconds(50));
+                    Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(10, 101)));
 
                     this.Dispatcher.BeginInvoke(new Action(() =>
                     {
-                        Macchina1.Margin = new Thickness(concorrente1, 95, 0, 0);
+                        Macchina1.Margin = new Thickness(macchina1, 95, 0, 0);
                     }));                   
                  
-                    concorrente2 -= 30;
+                    macchina2 -= 30;
 
-                    Thread.Sleep(TimeSpan.FromMilliseconds(50));
+                    Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(10,101)));
 
                     this.Dispatcher.BeginInvoke(new Action(() =>
                     {
-                        Macchina2.Margin = new Thickness(concorrente2, 95, 0, 0);
+                        Macchina2.Margin = new Thickness(macchina2, 95, 0, 0);
                     }));
 
-                    if(concorrente1 <= 20 && concorrente2 <= 50)
+                    if(macchina1 <= 20 && macchina2 <= 50)
                     {
                         break;
                     }
@@ -79,38 +79,38 @@ namespace esercizio_ponte
             }  
         }
 
-        public void MuoviConcorrente3()
+        public void MuoviMacchina2()
         {
 
             Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(50, 201)));
 
             lock (Ponte)
             {
-                int concorrente3 = 138;
-                int concorrente4 = 10;
+                int macchina3 = 138;
+                int macchina4 = 10;
 
                 while (true)
                 {
 
-                    concorrente3 += 30;
+                    macchina3 += 30;
 
-                    Thread.Sleep(TimeSpan.FromMilliseconds(50));
-
-                    this.Dispatcher.BeginInvoke(new Action(() =>
-                    {
-                        Macchina3.Margin = new Thickness(concorrente3, 227, 0, 0);
-                    }));
-
-                    concorrente4 += 30;
-
-                    Thread.Sleep(TimeSpan.FromMilliseconds(50));
+                    Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(10, 101)));
 
                     this.Dispatcher.BeginInvoke(new Action(() =>
                     {
-                        Macchina4.Margin = new Thickness(concorrente4, 227, 0, 0);
+                        Macchina3.Margin = new Thickness(macchina3, 227, 0, 0);
                     }));
 
-                    if (concorrente3 > 750 && concorrente4 > 600)
+                    macchina4 += 30;
+
+                    Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(10, 101)));
+
+                    this.Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        Macchina4.Margin = new Thickness(macchina4, 227, 0, 0);
+                    }));
+
+                    if (macchina3 > 750 && macchina4 > 600)
                     {
                         break;
                     }
@@ -123,9 +123,9 @@ namespace esercizio_ponte
         private void btnVia_Click(object sender, RoutedEventArgs e)
         {
 
-            Thread t1 = new Thread(new ThreadStart(MuoviConcorrente1));      
+            Thread t1 = new Thread(new ThreadStart(MuoviMacchina1));      
 
-            Thread t3 = new Thread(new ThreadStart(MuoviConcorrente3));
+            Thread t3 = new Thread(new ThreadStart(MuoviMacchina2));
 
             t1.Start();
 
