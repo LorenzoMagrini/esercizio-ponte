@@ -28,6 +28,9 @@ namespace esercizio_ponte
 
         public MainWindow()
         {
+
+            //I veicoli che vengono, tramite i Thread, eseguiti e startati per primi hanno la possibilità di transitare per primi sul ponte
+
             InitializeComponent();
 
             Macchina1.Margin = new Thickness(587, 95, 0, 0);
@@ -38,6 +41,11 @@ namespace esercizio_ponte
 
             Macchina4.Margin = new Thickness(0, 227, 0, 0);
 
+            Camion1.Margin = new Thickness(564, 86, 0, 0);
+
+            Camion2.Margin = new Thickness(32, 217, 0, 0);
+
+            Camion3.Margin = new Thickness(32, 217, 0, 0);
         }
 
         public void MuoviMacchina1()
@@ -77,6 +85,35 @@ namespace esercizio_ponte
                     }
                 }
             }  
+        }
+
+        public void MuoviCamion1()
+        {
+
+            Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(50, 201)));
+
+            lock (Ponte)
+            {
+                int camion1 = 564;
+
+                while (true)
+                {
+
+                    camion1 -= 30;
+
+                    Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(50, 201)));
+
+                    this.Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        Camion1.Margin = new Thickness(camion1, 86, 0, 0);
+                    }));
+
+                    if (camion1 <= 20)
+                    {
+                        break;
+                    }
+                }
+            }
         }
 
         public void MuoviMacchina2()
@@ -120,16 +157,86 @@ namespace esercizio_ponte
             }
         }
 
+        public void MuoviCamion2()
+        {
+
+            Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(50, 201)));
+
+            lock (Ponte)
+            {
+                int camion2 = 32;
+
+                while (true)
+                {
+
+                    camion2 += 30;
+
+                    Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(50, 201)));
+
+                    this.Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        Camion2.Margin = new Thickness(camion2, 217, 0, 0);
+                    }));
+
+                    if (camion2 > 600)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+
+        public void MuoviCamion3()
+        {
+
+            Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(50, 201)));
+
+            lock (Ponte)
+            {
+                int camion3 = 32;
+
+                while (true)
+                {
+
+                    camion3 += 30;
+
+                    Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(50, 201)));
+
+                    this.Dispatcher.BeginInvoke(new Action(() =>
+                    {
+                        Camion3.Margin = new Thickness(camion3, 217, 0, 0);
+                    }));
+
+                    if (camion3 > 600)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+
         private void btnVia_Click(object sender, RoutedEventArgs e)
         {
 
-            Thread t1 = new Thread(new ThreadStart(MuoviMacchina1));      
+            Thread t1 = new Thread(new ThreadStart(MuoviMacchina1));
+
+            Thread t2 = new Thread(new ThreadStart(MuoviCamion1));
 
             Thread t3 = new Thread(new ThreadStart(MuoviMacchina2));
 
+            Thread t4 = new Thread(new ThreadStart(MuoviCamion2));
+
+            Thread t5 = new Thread(new ThreadStart(MuoviCamion3));
+
             t1.Start();
 
-            t3.Start(); 
+            t2.Start();
+
+            t3.Start();
+
+            t4.Start();
+
+            t5.Start();
         }
     }
 }

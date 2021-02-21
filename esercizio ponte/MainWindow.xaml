@@ -17,6 +17,9 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <Image x:Name="Camion2" HorizontalAlignment="Left" Height="142" Margin="32,217,0,0" VerticalAlignment="Top" Width="156" Source="camion1.png"/>
+        <Image x:Name="Camion3" HorizontalAlignment="Left" Height="142" Margin="32,217,0,0" VerticalAlignment="Top" Width="156" Source="camion1.png"/>
+        <Image x:Name="Camion1" HorizontalAlignment="Left" Height="142" Margin="564,86,0,0" VerticalAlignment="Top" Width="156" Source="camion.png"/>
         <Image x:Name="Macchina2" HorizontalAlignment="Left" Height="100" Margin="692,95,0,0" VerticalAlignment="Top" Width="100" Source="auto.png" RenderTransformOrigin="2.63,0.111"/>
         <Image x:Name="Macchina1" HorizontalAlignment="Left" Height="100" Margin="587,95,0,0" VerticalAlignment="Top" Width="100" Source="auto.png" RenderTransformOrigin="2.63,0.111"/>
         <Image x:Name="Macchina3" HorizontalAlignment="Left" Height="100" Margin="0,227,0,0" VerticalAlignment="Top" Width="100" Source="auto2.png" RenderTransformOrigin="2.63,0.111"/>
@@ -46,9 +49,8 @@
         </Image>
         <Image HorizontalAlignment="Left" Height="100" Margin="359,10,0,0" VerticalAlignment="Top" Width="100" Source="semaforo2.png"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="359,242,0,0" VerticalAlignment="Top" Width="100" Source="semaforo.png"/>
-        <Label Content="2 AUTO" HorizontalAlignment="Left" Margin="660,10,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="SimSun" Height="45" Width="101"/>
-        <Label Content="2 AUTO" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="SimSun" Height="45" Width="101"/>
-
+        <Label Content="3 VEICOLI" HorizontalAlignment="Left" Margin="647,12,0,0" VerticalAlignment="Top" FontSize="26" FontFamily="SimSun" Height="45" Width="145" RenderTransformOrigin="0.571,0.65"/>
+        <Label Content="4 VEICOLI" HorizontalAlignment="Left" Margin="0,320,0,0" VerticalAlignment="Top" FontSize="26" FontFamily="SimSun" Height="45" Width="141"/>
 
     </Grid>
 </Window>
